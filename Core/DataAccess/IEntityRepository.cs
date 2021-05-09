@@ -12,6 +12,7 @@ namespace Core.DataAccess
     //Generic Constraint
     //class=referans type
     //IEntity=IEntity or implement or IEntity
+    // new() lenebilir olmalı
     public interface IEntityRepository<T> where T:class,IEntity,new()
     {
         List<T> GetAll(Expression<Func<T,bool>>filter=null);
